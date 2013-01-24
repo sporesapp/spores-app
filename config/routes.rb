@@ -1,6 +1,8 @@
 SporesApp::Application.routes.draw do
+  # get "sessions/new"
   # get "users/new"
   resources :users
+  resources :sessions
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
