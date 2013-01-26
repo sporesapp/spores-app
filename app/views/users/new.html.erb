@@ -1,4 +1,6 @@
-<h1>Users#new</h1>
+<% provide :title, "Sign up" %>
+
+<h1>Sign up</h1>
 
 <%= form_for @user do |f| %>
 	<% if @user.errors.any? %>

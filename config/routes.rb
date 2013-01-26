@@ -1,4 +1,10 @@
 SporesApp::Application.routes.draw do
+  get "static/homepage"
+
+  get "static/imprint"
+
+  get "static/contact"
+
   # get "sessions/new"
   # get "users/new"
   
