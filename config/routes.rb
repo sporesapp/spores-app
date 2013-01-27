@@ -1,10 +1,4 @@
 SporesApp::Application.routes.draw do
-  get "static/homepage"
-
-  get "static/imprint"
-
-  get "static/contact"
-
   # get "sessions/new"
   # get "users/new"
   
@@ -14,6 +8,9 @@ SporesApp::Application.routes.draw do
   match '/signup', to: 'users#new'
   match '/signin', to: 'sessions#new'
   match '/signout', to: 'sessions#destroy', via: :delete
+  
+  match '/imprint', to: 'static#imprint'
+  match '/contact', to: 'static#contact'
   
   # The priority is based upon order of creation:
   # first created -> highest priority.
@@ -64,7 +61,7 @@ SporesApp::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  root :to => 'users#new'
+  root :to => 'static#homepage'
 
   # See how all your routes lay out with "rake routes"
 
